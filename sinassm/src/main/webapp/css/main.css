@@ -1,0 +1,101 @@
+@CHARSET "UTF-8";
+.search {
+	width: 400px;
+	position: relative;
+}
+
+.search input {
+	vertical-align: middle;
+}
+
+.search div {
+	vertical-align: middle;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.layui-btn {
+	border-radius: none;
+}
+
+#other {
+	height: 500px;
+	width: 1000px;
+	z-index: 1000;
+}
+
+.show {
+	opacity: 1;
+}
+
+.hide {
+	opacity: 0;
+}
+
+.box {
+	position: relative;
+}
+
+.users {
+	width:95%;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	
+}
+.weibo{
+	
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	
+}
+.showWeibo{
+	
+	width:95%;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	
+}
+.showWeibo table {
+	width:80%;
+}
+.showUserFriend{
+	width:95%;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	
+}
+.showUserFriend table {
+	width:85%;
+}
+
+
+.userdetail {
+
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 100%;
+	
+}
+.adminpage{
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 100%;
+	
+}
+.createAmdinForm{
+	width:700px;
+	margin:50px auto;
+}
+.size {
+	width: 400px;
+}
+.size2 {
+	width: 700px;
+}

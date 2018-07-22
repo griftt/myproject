@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.WeiBoMapper">
+		<select id="selectAll" resultType="weiBo">
+		select * from t_weibo
+	</select>
+	<select id="findByAccount" parameterType="string" resultType="weiBo">
+		select * from t_weibo where account like #{_parameter} 
+	</select>
+	<select id="selectPage" resultType="weiBo" parameterType="Query">
+		select * from t_weibo where userid=#{userId} limit ${page},${limit}
+	</select>
+	
+	<select id="countAll" resultType="int">
+		select count(*) from t_weibo 
+	</select>
+	<select id="countUserWeibo" parameterType="int" resultType="int">
+		select count(*) from t_weibo where userid= #{userId} 
+	</select>
+	<delete id="deleteWeiBoById" parameterType="int">
+		delete from t_weibo where id = ${id}
+	</delete>
+	
+		
+</mapper>

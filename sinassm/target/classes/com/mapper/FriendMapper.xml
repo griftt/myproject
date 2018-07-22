@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.FriendMapper">
+	<select id="selectAll" resultType="friend">
+		select * from t_friend
+	</select>
+	<!-- <select id="findByAccount" parameterType="string" resultType="user">
+		select * from t_user where account like #{_parameter} 
+	</select> -->
+	<select id="selectPage" resultType="friend" parameterType="Query">
+		select * from t_friend where userid= #{userId} limit ${page},${limit} 
+	</select>
+	<select id="countAll" resultType="int">
+		select count(*) from t_friend 
+	</select>
+	<select id="countUserFriend" resultType="int">
+		select count(*) from t_friend where userid=#{id}
+	</select>
+	<delete id="deleteUserFriend" parameterType="int">
+		delete from t_friend where id = ${id}
+	</delete>
+	
+	
+	
+	
+</mapper>
